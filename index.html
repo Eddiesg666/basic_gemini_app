@@ -1,6 +1,51 @@
-<h1>hello world title</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Blog</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-<section id="blog articles">
+<body>
+  <h1>Hello World Title</h1>
+
+  <!-- Existing articles -->
+  <section id="blog-articles">
     <div>
+      <h2>One day I ate some good food</h2>
+      <p class="good-food">I had a good time!</p>
+      <p class="good-food">The meal included a burger and fries.</p>
+    </div>
 
-</section>
+    <div id="second-article">
+      <h2>Today I had some bad food</h2>
+      <p class="bad-food">
+        I threw up after. The meal included fish. I think it was under-cooked.
+      </p>
+    </div>
+  </section>
+
+  
+  <!-- New article form  -->
+
+  <h2>Add a New Article</h2>
+  <form id="new-article-form" aria-label="Add blog article">
+    <label for="article-title">Heading:</label>
+    <input
+      id="article-title"
+      type="text"
+      placeholder="Article title"
+      required />
+
+    <label for="article-body">Paragraph:</label>
+    <textarea
+      id="article-body"
+      placeholder="Write something interesting…"
+      required></textarea>
+
+    <button type="submit">Add Article</button>
+  </form>
+
+  <script src="./script.js"></script>
+</body>
+</html>
