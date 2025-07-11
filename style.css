@@ -1,17 +1,25 @@
 @charset "UTF-8";
 
-
-h2        { font-size: 24px; font-style: italic; color: black; }
-.good-food{ color: green; }
-.bad-food { color: red; }
-
+/* Typography & color rules */
+h2 { font-size: 24px; font-style: italic; color: black; }
+.good-food { color: green; }
+.bad-food  { color: red; }
 #second-article h2 { color: red; }
 
-#blog-articles > div:first-child::before {
-  content: "🍔 ";
-}
+/* Pseudo-element demo */
+#blog-articles > div:first-child::before { content: "🍔 "; }
 
-/* simple form styling */
+/* Delete-button styling */
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 0.9em;      
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.delete-btn:hover { opacity: 0.7; }
+
+/* Simple form layout */
 form {
   margin-top: 2rem;
   display: flex;
@@ -19,15 +27,6 @@ form {
   gap: 0.5rem;
   max-width: 400px;
 }
-
 form input,
-form textarea {
-  padding: 0.5rem;
-  font: inherit;
-}
-
-form button {
-  width: fit-content;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
+form textarea { padding: 0.5rem; font: inherit; }
+form button    { width: fit-content; padding: 0.5rem 1rem; cursor: pointer; }
