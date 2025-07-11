@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* Typography & color rules */
+/* --- Typography & colours --- */
 h2 { font-size: 24px; font-style: italic; color: black; }
 .good-food { color: green; }
 .bad-food  { color: red; }
@@ -9,17 +9,27 @@ h2 { font-size: 24px; font-style: italic; color: black; }
 /* Pseudo-element demo */
 #blog-articles > div:first-child::before { content: "🍔 "; }
 
-/* Delete-button styling */
-.delete-btn {
+/* --- Control buttons --- */
+.delete-btn,
+.edit-btn {
   background: none;
   border: none;
-  font-size: 0.9em;      
-  margin-left: 0.5rem;
+  font-size: 0.9em;
+  margin-left: 0.4rem;
   cursor: pointer;
 }
-.delete-btn:hover { opacity: 0.7; }
+.delete-btn:hover,
+.edit-btn:hover { opacity: 0.7; }
 
-/* Simple form layout */
+/* --- Color-picker section --- */
+#color-picker-section {
+  margin: 1.5rem 0;
+}
+#bg-color-input {
+  margin-left: 0.5rem;
+}
+
+/* --- Article-adding form --- */
 form {
   margin-top: 2rem;
   display: flex;

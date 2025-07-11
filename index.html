@@ -9,12 +9,22 @@
 <body>
   <h1>Hello World Title</h1>
 
-  <!-- Existing articles -->
+  <!-- ===== Background-color picker ===== -->
+  <section id="color-picker-section">
+    <h2>Choose Page Background Color</h2>
+    <form id="bg-color-form" aria-label="Page background color picker">
+      <label for="bg-color-input">Background color:</label>
+      <input type="color" id="bg-color-input" value="#ffffff" />
+    </form>
+  </section>
+
+  <!-- ===== Existing articles with Delete + Edit buttons ===== -->
   <section id="blog-articles">
     <div>
       <h2>
         One day I ate some good food
         <button class="delete-btn" aria-label="Delete article">🗑️</button>
+        <button class="edit-btn"   aria-label="Edit article">✏️</button>
       </h2>
       <p class="good-food">I had a good time!</p>
       <p class="good-food">The meal included a burger and fries.</p>
@@ -24,6 +34,7 @@
       <h2>
         Today I had some bad food
         <button class="delete-btn" aria-label="Delete article">🗑️</button>
+        <button class="edit-btn"   aria-label="Edit article">✏️</button>
       </h2>
       <p class="bad-food">
         I threw up after. The meal included fish. I think it was under-cooked.
@@ -31,21 +42,14 @@
     </div>
   </section>
 
-  <!-- Form to add new articles -->
+  <!-- ===== Form to add new articles ===== -->
   <h2>Add a New Article</h2>
   <form id="new-article-form" aria-label="Add blog article">
     <label for="article-title">Heading:</label>
-    <input
-      id="article-title"
-      type="text"
-      placeholder="Article title"
-      required />
+    <input id="article-title" type="text" placeholder="Article title" required />
 
     <label for="article-body">Paragraph:</label>
-    <textarea
-      id="article-body"
-      placeholder="Write something interesting…"
-      required></textarea>
+    <textarea id="article-body" placeholder="Write something interesting…" required></textarea>
 
     <button type="submit">Add Article</button>
   </form>
